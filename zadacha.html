@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="zadacha.css">
+    <title>Размен денег</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <h1 class="brand">
+                    <span class="brand-top">Сладкий</span>
+                    <span class="brand-bottom">Путь</span>
+                </h1>
+            </a>
+            <ul class="menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="work.html">Работа с нами</a></li>
+                <li><a href="pasport.html">Паспорт</a></li>
+                <li><a href="#" style="color: black;">Задача</a></li>
+                <li><a href="https://2gis.ru/moscow/search/%D0%BA%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D1%8B/rubricId/363?m=37.64844%2C55.744209%2F12.17">Мы по стране</a></li>
+                <li><a href="#" id="cart-button" class="action-button">Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="cart" id="cart" style="display: none;">
+        <h2>Корзина</h2>
+        <ul id="cart-items"></ul>
+        <p>Общая сумма: <span id="total-price">0</span> руб.</p>
+        <button id="checkout-button" disabled>Оплатить</button>
+        <button id="close-cart-button">Закрыть</button>
+    </div>
+
+    <div class="solution-container">
+        <h1>Размен денежной суммы</h1>
+        <input type="number" id="amount" class="styled-input" placeholder="Введите сумму в рублях" min="0">
+        <button class="styled-button" onclick="calculateChange()">Разменять</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <footer> 
+        <p>&copy; 2024 Кондитерская Сладкий путь. Все права защищены.</p>
+    </footer>
+
+    <script src="zadacha.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

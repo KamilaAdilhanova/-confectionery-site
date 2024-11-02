@@ -1,0 +1,402 @@
+body {
+    font-family: 'COURIER NEW', Arial, sans-serif; /* Устанавливаем основной шрифт */
+    margin: 0; /* Убираем отступы вокруг страницы */
+    padding: 0; /* Убираем внутренние отступы */
+    background-color: #ffcc99; /* Фоновый цвет страницы */
+}
+
+html {
+    scroll-behavior: smooth; /* Плавный переход при прокрутке */
+}
+
+a {
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+}
+
+header {
+    padding: 10px 50px; /* Внутренние отступы для верхнего отступа и боков */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень под заголовком */
+}
+
+nav {
+    margin-top: 10px; /* Верхний отступ для навигации */
+    display: flex; /* Используем flexbox для горизонтального выравнивания */
+    justify-content: space-between; /* Пространство между элементами */
+    align-items: center; /* Центрирование элементов по вертикали */
+}
+
+.brand {
+    font-size: 3em; /* Крупный размер шрифта для бренда */
+    font-weight: bold; /* Жирный текст */
+    color: white; /* Цвет текста */
+    margin: 0; /* Убираем отступы */
+    text-align: left; /* Выравнивание текста влево */
+    line-height: 0.9; /* Высота строки для плотного текста */
+}
+
+.brand-top, .brand-bottom {
+    display: block; /* Размещаем каждый span на новой строке */
+}
+
+.menu {
+    font-size: 1.5em; /* Размер шрифта меню */
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0; /* Убираем внешние отступы */
+    display: flex; /* Элементы меню в строку */
+}
+
+.menu li {
+    padding: 7px; /* Внутренние отступы */
+    margin: 0 15px; /* Отступы между элементами */
+    position: relative; /* Устанавливаем относительное позиционирование для псевдоэлемента */
+}
+
+.menu a, .menu li {
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    color: white; /* Цвет текста */
+    font-weight: bold; /* Жирный текст */
+    transition: color 0.3s ease, transform 0.3s ease; /* Плавные переходы для цвета и масштаба */
+}
+
+.menu li::after {
+    content: ''; /* Псевдоэлемент, пустой блок */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 100%; /* Ширина блока равна элементу */
+    height: 2px; /* Высота линии */
+    background-color: black; /* Цвет линии */
+    bottom: -5px; /* Расположение под элементом */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translateX(-50%) scaleX(0); /* Скрываем линию */
+    transition: transform 0.3s ease; /* Плавное появление линии */
+}
+
+.menu li:hover a {
+    color: black; /* Цвет текста при наведении */
+    transform: scale(1.1); /* Увеличение текста при наведении */
+}
+
+.menu li:hover::after {
+    transform: translateX(-50%) scaleX(1); /* Показать линию при наведении */
+}
+
+.menu a.action-button {
+    color: white; /* Цвет текста кнопки */
+    background-color: transparent; /* Прозрачный фон */
+    padding: 10px; /* Отступы */
+    font-size: 1em; /* Размер шрифта */
+    border: none; /* Без рамок */
+    cursor: pointer; /* Курсор при наведении */
+    transition: color 0.3s ease, transform 0.3s ease; /* Плавный переход для цвета */
+}
+
+footer {
+    color: white; /* Цвет текста */
+    text-align: center; /* Центрирование текста */
+    background-color: #000000; /* Фоновый цвет */
+    padding-top: 15px; /* Отступ сверху */
+    padding-bottom: 15px; /* Отступ снизу */
+    width: 100%; /* Ширина на всю страницу */
+}
+
+footer a {
+    text-decoration: none; /* Убираем подчеркивание ссылок в футере */
+    color: #fff3e6; /* Цвет ссылки */
+}
+
+footer a:hover {
+    color: #b0815d; /* Цвет ссылки при наведении */
+}
+
+.gallery {
+    display: flex; /* Используем flexbox */
+    flex-wrap: wrap; /* Картинки на новой строке при необходимости */
+    gap: 20px; /* Расстояние между картинками */
+    padding: 20px; /* Внутренние отступы */
+    justify-content: space-between; /* Расстояние между изображениями */
+}
+
+.image-item {
+    width: calc(25% - 20px); /* Ширина 4-х колонок, минус отступ */
+    position: relative; /* Позиционирование для внутреннего текста */
+    text-align: center; /* Центрирование текста */
+    margin-bottom: 30px; /* Отступ снизу */
+}
+
+.image-container {
+    position: relative; /* Позиционирование для элементов внутри */
+    overflow: hidden; /* Обрезка изображения по границам */
+    width: 100%; /* Ширина по контейнеру */
+    height: 450px; /* Фиксированная высота */
+    border-radius: 10px; /* Скругленные углы */
+}
+
+.image-container img {
+    width: 100%; /* Ширина по контейнеру */
+    height: 100%; /* Высота по контейнеру */
+    object-fit: cover; /* Обрезка изображения с сохранением пропорций */
+    transition: transform 0.3s ease; /* Плавный переход увеличения */
+}
+
+.image-container:hover img {
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+.image-description {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0; /* Расположение сверху */
+    left: 0; /* Расположение слева */
+    width: 100%; /* Ширина по контейнеру */
+    height: 100%; /* Высота по контейнеру */
+    display: flex; /* Flex для центрирования текста */
+    align-items: center; /* Вертикальное центрирование */
+    justify-content: center; /* Горизонтальное центрирование */
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон */
+    color: white; /* Цвет текста */
+    opacity: 0; /* Прозрачный по умолчанию */
+    transition: opacity 0.3s ease; /* Плавный переход для появления */
+    font-size: 1.2em; /* Размер текста */
+}
+
+.image-container:hover .image-description {
+    opacity: 1; /* Показать описание при наведении */
+}
+
+.add-button {
+    margin-top: 10px; /* Отступ сверху */
+    padding: 10px 20px; /* Внутренние отступы */
+    background-color: #d7b592; /* Фон кнопки */
+    color: white; /* Цвет текста */
+    border: none; /* Без рамок */
+    cursor: pointer; /* Курсор при наведении */
+    font-size: 1em; /* Размер текста */
+    border-radius: 5px; /* Скругленные углы */
+    transition: background-color 0.3s ease; /* Плавный переход для цвета */
+}
+
+.add-button:hover {
+    background-color: #b0815d; /* Цвет при наведении */
+}
+
+/* Стили для текста заголовков */
+.text_h1 {
+    font-size: 5em; /* Крупный шрифт */
+    padding: 10; /* Отступы */
+    margin: 10; /* Отступы */
+    text-align: center; /* Центрирование */
+    color: white; /* Цвет текста */
+}
+
+.text_h2 {
+    font-size: 2.5em; /* Размер текста */
+    padding-left: 20px; /* Отступ слева */
+    text-align: left; /* Выравнивание слева */
+    color: black; /* Цвет текста */
+}
+
+.text_h3 {
+    font-size: 2em; /* Размер текста */
+    padding-left: 20px; /* Отступ слева */
+    margin-top: 0px; /* Убираем верхний отступ */
+    text-align: left; /* Выравнивание текста */
+    color: black; /* Цвет текста */
+}
+
+/* Стили для кнопок */
+.button-row {
+    display: flex; /* Flex для горизонтального выравнивания */
+    justify-content: space-between; /* Равное расстояние между кнопками */
+    gap: 100px; /* Расстояние между кнопками */
+    padding-left: 100px; /* Отступ слева */
+    padding-right: 100px; /* Отступ справа */
+}
+
+.action-button {
+    width: 250px; /* Ширина кнопки */
+    flex: 1; /* Равные пропорции */
+    padding: 10px; /* Внутренние отступы */
+    background-color: #ffcc99; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border: none; /* Без рамок */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+    font-size: 1.3em; /* Размер текста */
+    transition: background-color 0.3s ease; /* Плавный переход */
+}
+
+.action-button:hover {
+    background-color: #b0815d; /* Цвет при наведении */
+    color: black; /* Цвет текста при наведении */
+}
+
+ol {
+    padding-left: 50px; /* Отступ слева */
+    width: 30em; /* Ширина списка */
+}
+
+/* Стили основного уровня списка */
+ol > li {
+    background-color: #f7f7f7; /* Цвет фона */
+    margin: 10px 0; /* Отступы */
+    padding: 15px; /* Внутренние отступы */
+    border-radius: 5px; /* Скругленные углы */
+    font-weight: bold; /* Жирный шрифт */
+    font-size: 1.2em; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+/* Вложенные элементы */
+ol li ul li {
+    font-size: 1em; /* Размер текста */
+    font-weight: normal; /* Обычный текст */
+    color: #666; /* Цвет текста */
+    margin: 5px 0; /* Отступы */
+    background-color: #fafafa; /* Цвет фона */
+    padding: 10px; /* Внутренние отступы */
+    border-radius: 5px; /* Скругленные углы */
+}
+
+ol > li:hover {
+    background-color: #e6e6e6; /* Фон при наведении */
+    color: #111; /* Цвет текста при наведении */
+}
+
+td img {
+    width: 300px; /* Ширина изображения */
+    height: 200px; /* Высота изображения */
+}
+
+.container {
+    display: flex; /* Flexbox для горизонтального выравнивания */
+    justify-content: space-between; /* Расстояние между элементами */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+}
+
+.list-container {
+    flex: 1; /* Ширина 100% для списка */
+    padding: 20px; /* Внутренние отступы */
+}
+
+.table-container {
+    flex: 1; /* Ширина 100% для таблицы */
+    padding: 20px; /* Внутренние отступы */
+    margin: 30px; /* Отступ */
+    background-image: url('img/bg_table.jpg'); /* Фоновое изображение */
+    background-size: cover; /* Заполнение фона изображением */
+    background-position: center; /* Центрирование изображения */
+    border-radius: 8px; /* Скругленные углы */
+}
+
+table {
+    color: white; /* Цвет текста */
+    font-size: 33px; /* Размер шрифта */
+    font-weight: bold; /* Жирный текст */
+    width: 100%; /* Ширина 100% */
+    border-collapse: collapse; /* Убираем промежутки */
+}
+
+th, td {
+    border: 1px solid #000; /* Граница ячеек */
+    padding: 10px; /* Отступы */
+    text-align: left; /* Выравнивание */
+}
+
+/* Стили корзины */
+.cart {
+    z-index: 1000;
+    position: fixed; /* Фиксированное позиционирование */
+    top: 10%; /* Позиция сверху */
+    right: 10%; /* Позиция справа */
+    padding: 20px; /* Отступы */
+    background-color: #fff; /* Фон */
+    color: #333; /* Цвет текста */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    max-width: 300px; /* Максимальная ширина */
+}
+
+.cart h2 {
+    font-size: 1.5em; /* Размер заголовка */
+    margin-bottom: 10px; /* Отступ */
+}
+
+.cart ul {
+    list-style: none; /* Убираем маркеры */
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем отступы */
+}
+
+.cart li {
+    margin: 10px 0; /* Отступы */
+    font-size: 1em; /* Размер текста */
+}
+
+#checkout-button,
+#close-cart-button {
+    background-color: #db8b6a; /* Цвет кнопки */
+    color: white; /* Цвет текста */
+    border: none; /* Без рамок */
+    padding: 10px 15px; /* Внутренние отступы */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Курсор */
+    transition: background-color 0.3s ease; /* Переход цвета */
+}
+
+#checkout-button:disabled {
+    background-color: #ccc; /* Цвет кнопки при отключении */
+    cursor: not-allowed; /* Курсор для отключенной кнопки */
+}
+
+#checkout-button:hover:not(:disabled),
+#close-cart-button:hover {
+    background-color: #c27b5a; /* Цвет при наведении */
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    .brand {
+        font-size: 2em; /* Уменьшаем шрифт для бренда */
+    }
+
+    .menu {
+        flex-direction: column; /* Меню в столбик */
+        align-items: center; /* Центрирование */
+    }
+
+    .menu li {
+        margin-bottom: 10px; /* Отступы между элементами */
+    }
+
+    .action-button {
+        font-size: 1em; /* Размер кнопки */
+    }
+
+    h1.text_h1, h2.text_h2 {
+        font-size: 1.5em; /* Уменьшаем шрифт заголовков */
+    }
+
+    .image-item {
+        width: 100%; /* Ширина 100% для изображений */
+        max-width: 300px; /* Максимальная ширина */
+    }
+
+    .button-row {
+        flex-direction: column; /* Кнопки в столбик */
+    }
+
+    .list-container, .table-container {
+        margin: 10px; /* Отступы */
+        flex: 1 1 100%; /* Полная ширина для мобильных */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        width: 100%; /* Полная ширина для изображений */
+    }
+
+    .action-button {
+        padding: 8px 16px; /* Уменьшаем отступы */
+    }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы. Отправляем данные на сервер</title>
+    <link rel="stylesheet" href="work.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <h1 class="brand">
+                    <span class="brand-top">Сладкий</span>
+                    <span class="brand-bottom">Путь</span>
+                </h1>
+            </a>
+            
+            <ul class="menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="work.html" style="color: black;">Работа с нами</a></li>
+                <li><a href="pasport.html">Паспорт</a></li>
+                <li><a href="zadacha.html">Задача</a></li>
+                <li><a href="https://2gis.ru/moscow/search/%D0%BA%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D1%8B/rubricId/363?m=37.64844%2C55.744209%2F12.17">Мы по стране</a></li>
+                <li><a href="#" id="cart-button" class="action-button">Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="cart" id="cart" style="display: none;">
+        <h2>Корзина</h2>
+        <ul id="cart-items"></ul>
+        <p>Общая сумма: <span id="total-price">0</span> руб.</p>
+        <button id="checkout-button" disabled>Оплатить</button>
+        <button id="close-cart-button">Закрыть</button>
+    </div>
+
+    <h3 align="center">Формы. Отправляем данные на сервер</h3>
+    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank" onsubmit="return showNotification();">
+        <p><input type="hidden" name="q" value="Заявка успешно отправлена. С вами свяжуться."></p>
+        
+        <p>ФИО: <input type="text" name="last_name" size="60" value="ФИО"></p>
+        
+        <p>Возраст: <input type="number" name="age" size="20" value="18"></p>
+        
+        <p>Опыт работы в сфере кондитерства:
+            <select name="staj">
+                <option value="Да больше года">Да больше года</option>
+                <option value="Да, меньше года">Да, меньше года</option>
+                <option value="Нет">Нет</option>
+            </select>
+        </p>
+
+        <p>Место проживания:
+            <input type="radio" name="place" value="Moscow">Москва
+            <input type="radio" name="place" value="Nizhny" checked>Питер
+        </p>
+
+        <p>Стаж работы:
+            <input type="checkbox" name="experience" value="10" checked>Кондитером - 10
+            <input type="checkbox" name="experience" value="20" checked>Пекарем - 20
+            <input type="checkbox" name="experience" value="30" checked>Менеджером - 30
+        </p>
+
+
+
+        <p>Дополнительная информация:
+            <br>
+            <textarea cols="80" rows="4" name="textarea">Для заметок</textarea>
+        </p>
+
+        <p>Почта: <input type="email" name="email" size="60" value=""></p>
+
+        <p>Дата: <input type="date" name="user_date" value="2024-10-02"></p>
+        
+        <p>Пароль: <input type="password" name="password" size="9" value="123"></p>
+        
+        <p>Название файла: <input type="text" name="000_file_name" value="Н_ОW_Г_326510_1_Ivanov.txt" size="30"></p>
+
+        <p>Тип записи в файл:
+            <select name="010_mode">
+                <option value="a">a - дозаписать в файл</option>
+                <option value="w">w - очистить файл и записать в файл</option>
+            </select>
+        </p>
+
+        <input type="hidden" name="function" value="page">
+        <input type="hidden" name="page_id" value="3">
+
+        <p>
+            <input type="reset" name="Reset" value="Обновить">
+            <input type="submit" name="submit" value="Отправить">
+        </p>
+    </form>
+
+    <div id="notification" class="notification" style="display: none;">Данные успешно отправлены!</div>
+
+    
+    <footer>
+        <p>&copy; 2024 Кондитерская Сладкий путь. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function showNotification() {
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000); // Уведомление исчезает через 3 секунды
+            return true; // Позволяет отправить форму
+            }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

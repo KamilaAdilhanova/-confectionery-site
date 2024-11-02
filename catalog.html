@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кондитерская</title>
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+    <div class="hero-section">
+        <header>
+            <nav>
+                <a href="index.html">
+                    <h1 class="brand">
+                        <span class="brand-top">Сладкий</span>
+                        <span class="brand-bottom">Путь</span>
+                    </h1>
+                </a>
+                
+                <ul class="menu">
+                    <li><a href="index.html" >Главная</a></li>
+                    <li><a href="#catalog" style="color: black">Каталог</a></li>
+                    <li><a href="work.html">Работа с нами</a></li>
+                    <li><a href="pasport.html">Паспорт</a></li>
+                    <li><a href="zadacha.html">Задача</a></li>
+                    <li><a href="https://2gis.ru/moscow/search/%D0%BA%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D0%BA%D0%B8%D0%B5%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D1%8B/rubricId/363?m=37.64844%2C55.744209%2F12.17">Мы по стране</a></li>
+                    <li><a href="#" id="cart-button" class="action-button">Корзина</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="cart" id="cart" style="display: none;">
+        <h2>Корзина</h2>
+        <ul id="cart-items"></ul>
+        <p>Общая сумма: <span id="total-price">0</span> руб.</p>
+        <button id="checkout-button" disabled>Оплатить</button>
+        <button id="close-cart-button">Закрыть</button>
+    </div>
+    
+    <h1 class="text_h1" id="catalog">Каталог</h1>
+
+    <div class="button-row">
+        <a href="#torts"><button class="action-button">Торты</button></a>
+        <a href="#cake"><button class="action-button">Пирожные</button></a>
+        <a href="#eclairs"><button class="action-button">Эклеры</button></a>
+        <a href="#baby_cakes"><button class="action-button">Детские торты</button></a>
+        <a href="#table"><button class="action-button">Список и таблица товара</button></a>
+    </div>
+    
+
+    <h2  class="text_h2" id="torts">Торты</h2>
+    <div class="gallery">
+        <div class="image-item">
+            <a href="img/торты/tort1.jpg">
+                <div class="image-container">
+                    <img src="img/торты/tort1.jpg" alt="Тортикс 1">
+                    <div class="image-description">Лайк и подписка. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/торты/tort2.jpg">
+                <div class="image-container">
+                    <img src="img/торты/tort2.jpg" alt="Тортикс 2">
+                    <div class="image-description">Последний из первых. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/торты/tort3.jpg">
+                <div class="image-container">
+                    <img src="img/торты/tort3.jpg" alt="Тортикс 3">
+                    <div class="image-description">Первый из первых. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/торты/tort4.jpg">
+                <div class="image-container">
+                    <img src="img/торты/tort4.jpg" alt="Тортикс 4">
+                    <div class="image-description">Среднечек. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/торты/tort5.jpg">
+                <div class="image-container">
+                    <img src="img/торты/tort5.jpg" alt="Тортикс 5">
+                    <div class="image-description">Просто нормис. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/торты/tort6.jpg">
+                <div class="image-container">
+                    <img src="img/торты/tort6.jpg" alt="Тортикс 6">
+                    <div class="image-description">Самий красивий. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/торты/tort7.jpg">
+                <div class="image-container">
+                    <img src="img/торты/tort7.jpg" alt="Тортикс 7">
+                    <div class="image-description">Бомба честно говоря. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/торты/tort8.jpg">
+                <div class="image-container">
+                    <img src="img/торты/tort8.jpg" alt="Тортикс 8">
+                    <div class="image-description">Самий любимий. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+    </div>
+    
+    <h2  class="text_h2" id="cake">Пирожные</h2>
+    <div class="gallery">
+        <div class="image-item">
+            <a href="img/пирожные/cake1.jpg">
+                <div class="image-container">
+                    <img src="img/пирожные/cake1.jpg" alt="Пирожное 1">
+                    <div class="image-description">Лайк и подписка. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/пирожные/cake2.jpg">
+                <div class="image-container">
+                    <img src="img/пирожные/cake2.jpg" alt="Пирожное 2">
+                    <div class="image-description">Последний из первых. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/пирожные/cake3.jpg">
+                <div class="image-container">
+                    <img src="img/пирожные/cake3.jpg" alt="Пирожное 3">
+                    <div class="image-description">Первый из первых. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/пирожные/cake4.jpg">
+                <div class="image-container">
+                    <img src="img/пирожные/cake4.jpg" alt="Пирожное 4">
+                    <div class="image-description">Среднечек. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/пирожные/cake5.jpg">
+                <div class="image-container">
+                    <img src="img/пирожные/cake5.jpg" alt="Пирожное 5">
+                    <div class="image-description">Просто нормис. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/пирожные/cake6.jpg">
+                <div class="image-container">
+                    <img src="img/пирожные/cake6.jpg" alt="Пирожное 6">
+                    <div class="image-description">Самий красивий. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/пирожные/cake7.jpg">
+                <div class="image-container">
+                    <img src="img/пирожные/cake7.jpg" alt="Пирожное 7">
+                    <div class="image-description">Бомба честно говоря. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/пирожные/cake8.jpg">
+                <div class="image-container">
+                    <img src="img/пирожные/cake8.jpg" alt="Пирожное 8">
+                    <div class="image-description">Самий любимий. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+    </div>
+
+    <h2  class="text_h2" id="eclairs">Эклеры</h2>
+    <div class="gallery">
+        <div class="image-item">
+            <a href="img/эклеры/eclairs1.jpg">
+                <div class="image-container">
+                    <img src="img/эклеры/eclairs1.jpg" alt="Эклер 1">
+                    <div class="image-description">Лайк и подписка. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/эклеры/eclairs2.jpg">
+                <div class="image-container">
+                    <img src="img/эклеры/eclairs2.jpg" alt="Эклер 2">
+                    <div class="image-description">Последний из первых. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/эклеры/eclairs3.jpg">
+                <div class="image-container">
+                    <img src="img/эклеры/eclairs3.jpg" alt="Эклер 3">
+                    <div class="image-description">Первый из первых. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/эклеры/eclairs4.jpg">
+                <div class="image-container">
+                    <img src="img/эклеры/eclairs4.jpg" alt="Эклер 4">
+                    <div class="image-description">Первый из первых. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+    </div>
+
+    <h2  class="text_h2" id="baby_cakes">Детские торты</h2>
+    <div class="gallery">
+        <div class="image-item">
+            <a href="img/детские_торты/baby_cakes1.jpg">
+                <div class="image-container">
+                    <img src="img/детские_торты/baby_cakes1.jpg" alt="Детский торт 1">
+                    <div class="image-description">Лайк и подписка. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/детские_торты/baby_cakes2.jpg">
+                <div class="image-container">
+                    <img src="img/детские_торты/baby_cakes2.jpg" alt="Детский торт 2">
+                    <div class="image-description">Последний из первых. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/детские_торты/baby_cakes3.jpg">
+                <div class="image-container">
+                    <img src="img/детские_торты/baby_cakes3.jpg" alt="Детский торт 3">
+                    <div class="image-description">Первый из первых. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+        <div class="image-item">
+            <a href="img/детские_торты/baby_cakes4.jpg">
+                <div class="image-container">
+                    <img src="img/детские_торты/baby_cakes4.jpg" alt="Детский торт 4">
+                    <div class="image-description">Первый из первых. Цена 999</div>
+                </div>
+            </a>
+            <button class="add-button" data-price="900">Добавить</button>
+        </div>
+    </div>
+
+    <a href="#catalog"><h3  class="text_h3">К началу</h3></a>
+
+
+    <div class="container" id="table">
+        <div class="list-container">
+            <ol>
+                <li>Торты
+                    <ul>
+                        <li>Детские торты</li>
+                        <li>Торты без мастики</li>
+                        <li>Бенто-торты</li>
+                    </ul>
+                </li>
+                <li>Пирожные
+                    <ul>
+                        <li>ПП пирожные</li>
+                        <li>Пирожные без мастики</li>
+                        <li>Пирожные на день рождения</li>
+                    </ul>
+                </li>
+                <li>Эклеры</li>
+                <li>Капкейки</li>
+                <li>ПП десерты</li>
+                <li>ПП торты</li>
+                <li>Морожное</li>
+                <li>Пряники</li>
+            </ol>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Наименование</th>
+                        <th>Фото</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Торт Шрек</td>
+                        <td style="width: 250px;"><a href="img/торты/tort5.jpg"><img src="img/торты/tort5.jpg" alt="Шрекичь"></a></td>
+                        <td style="width: 200px;">2999 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Пирожное имбулька</td>
+                        <td><a href="img/пирожные/cake1.jpg"><img src="img/пирожные/cake1.jpg" alt="Имбулька"></a></td>
+                        <td>699 руб.</td>
+                    </tr>
+                    <tr>
+                        <td>Сет наивкуснейших эклеров</td>
+                        <td><a href="img/эклеры/eclairs2.jpg"><img src="img/эклеры/eclairs2.jpg" alt="эклерка"></a></td>
+                        <td>859 руб.</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Кондитерская Сладкий путь. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

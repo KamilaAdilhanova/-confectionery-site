@@ -1,0 +1,208 @@
+body {
+    font-family: 'COURIER NEW', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffcc99;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    background-color: #000000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+header {
+    padding: 10px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between; /* Разделяем элементы */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+.brand {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    text-align: left;
+    line-height: 0.9; /* Контролируем расстояние между строками */
+}
+
+.brand-top, .brand-bottom {
+    display: block; /* Размещаем каждый span на отдельной строке */
+}
+
+.menu {
+    font-size: 1.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Располагаем элементы меню в одну строку */
+}
+
+.menu li {
+    padding: 7px;
+    margin: 0 15px;
+    position: relative;
+}
+
+.menu a, .menu li {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.menu li:hover a {
+    color: black;
+    transform: scale(1.1);
+}
+
+.menu li:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.menu a.action-button {
+    color: white; /* Цвет текста */
+    background-color: transparent; /* Цвет фона, если нужно */
+    padding: 10px; /* Отступы */
+    font-size: 1em;
+    border: none; /* Уберите рамки, если есть */
+    cursor: pointer; /* Указатель при наведении */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Форма */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #db8b6a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #c27b5a;
+}
+
+
+
+/* Корзина */
+.cart {
+    z-index: 1000;
+
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+}
+
+.cart h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart li {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+#checkout-button,
+#close-cart-button {
+    background-color: #db8b6a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#checkout-button:hover:not(:disabled),
+#close-cart-button:hover {
+    background-color: #c27b5a;
+}
+
+
+
