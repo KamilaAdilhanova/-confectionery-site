@@ -28,6 +28,8 @@ document.querySelectorAll('.add-button').forEach(button => {
     });
 });
 
+
+
 // Обработчик события для кнопки завершения покупки
 document.getElementById('checkout-button').addEventListener('click', function() {
     alert(`Оплата произведена! Сумма: ${totalPrice} руб.`); // Сообщаем о завершении покупки
