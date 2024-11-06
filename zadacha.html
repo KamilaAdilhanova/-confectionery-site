@@ -38,7 +38,10 @@
     <div class="solution-container">
         <h1>Размен денежной суммы</h1>
         <input type="number" id="amount" class="styled-input" placeholder="Введите сумму в рублях" min="0">
-        <button class="styled-button" onclick="calculateChange()">Разменять</button>
+        <div>
+            <button class="styled-button" onclick="calculateChange()">Разменять</button>
+            <button class="styled-button" id="bambuk" onclick="brouser()" disabled>Отправить</button>
+        </div>
         <div class="result" id="result"></div>
     </div>
 

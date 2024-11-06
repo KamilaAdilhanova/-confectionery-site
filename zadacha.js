@@ -1,3 +1,5 @@
+
+
 // Функция для расчета размена суммы
 function calculateChange() {
     // Получаем сумму из поля ввода и преобразуем её в целое число
@@ -37,4 +39,14 @@ function calculateChange() {
 
     // Отображаем результат в элементе с id 'result'
     document.getElementById('result').innerText = resultString;
+    document.getElementById('bambuk').disabled = false;
 }
+
+
+function brouser() {
+    const searchText = "Данные задачи успешно отправлены";
+
+    const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchText)}`;
+
+    window.location.href = googleSearchUrl;
+};
