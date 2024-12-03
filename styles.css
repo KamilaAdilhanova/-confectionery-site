@@ -316,7 +316,7 @@ footer a:hover {
 }
 
 /* Адаптивные стили для устройств с максимальной шириной 768px */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     header {
         padding: 10px 20px; /* Уменьшаем отступы в заголовке на мобильных */
     }
@@ -342,7 +342,7 @@ footer a:hover {
     }
 
     .text-center {
-        font-size: 4em; /* Уменьшаем размер шрифта для мобильных */
+        font-size: 1.5em; /* Уменьшаем размер шрифта для мобильных */
     }
 
     .order-link {
@@ -350,7 +350,7 @@ footer a:hover {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     header {
         flex-direction: column; /* Изменяем размещение элементов заголовка на вертикальное */
         align-items: center; /* Центрируем элементы заголовка по горизонтали */
@@ -378,7 +378,8 @@ footer a:hover {
     }
 
     .text-center {
-        font-size: 3em; /* Уменьшаем размер текста для мобильных */
+        font-size: 1.5em; /* Уменьшаем размер текста для мобильных */
+        
     }
 
     .order-link {
