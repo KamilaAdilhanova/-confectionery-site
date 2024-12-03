@@ -100,6 +100,7 @@ footer {
     background-size: cover; /* Изображение охватывает весь экран */
     background-position: center; /* Центрируем изображение */
     height: 100vh; /* Высота секции 100% от высоты экрана */
+    width: 105%;
     display: flex; /* Используем flexbox для размещения элементов в секции */
     flex-direction: column; /* Устанавливаем вертикальное размещение элементов */
     color: white; /* Цвет текста в секции */
