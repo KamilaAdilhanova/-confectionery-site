@@ -15,7 +15,7 @@ header {
 }
 
 nav {
-    margin-top: 10px; /* Добавляем отступ сверху к навигации */
+    margin-top: 10%; /* Добавляем отступ сверху к навигации */
     display: flex; /* Используем flexbox для размещения элементов навигации */
     justify-content: space-between; /* Разделяем элементы навигации по краям */
     align-items: center; /* Центрируем элементы по вертикали */
@@ -125,24 +125,31 @@ footer {
     margin-left: 60px; /* Отступ слева */
     text-align: left; /* Выравниваем текст по левому краю */
     color: white; /* Цвет текста для призыва к действию */
+    
+    
 }
 
 .text-center {
-    font-size: 6em; /* Размер шрифта для центрального текста */
+    font-size: 150%; /* Размер шрифта для центрального текста */
     font-weight: bold; /* Устанавливаем жирный шрифт */
     margin: 0; /* Убираем внешние отступы */
     line-height: 1.2; /* Контролируем расстояние между строками */
+    height: 74%;
+   
 }
 
-.text-center-top, .text-center-bottom {
+.text-center-top,.text-center-bottom {
     display: block; /* Размещаем каждый span на отдельной строке */
+    height: 47%;
 }
+
 
 .order-link {
-    font-size: 3em; /* Размер шрифта для ссылки заказа */
+    font-size: 250%; /* Размер шрифта для ссылки заказа */
     color: white; /* Цвет текста ссылки */
     position: relative; /* Относительное позиционирование для псевдоэлементов */
     text-decoration: none; /* Убираем стандартное подчеркивание у ссылки */
+   
 }
 
 .order-link::after {
